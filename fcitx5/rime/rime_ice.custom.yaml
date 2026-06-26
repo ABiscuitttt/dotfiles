@@ -1,4 +1,6 @@
 patch:
   "translator/spelling_hints": 0
   "translator/always_show_comments": false
+  "switches/@1/reset": 0
   "switches/@3/reset": 0
+  "menu/page_size": 9
