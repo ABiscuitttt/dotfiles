@@ -1,6 +1,6 @@
 # dotfiles
 
-个人配置文件备份。
+个人配置文件备份，通过 symlink 部署。
 
 ## fcitx5 + rime-ice
 
@@ -12,8 +12,21 @@
 | `fcitx5/rime/rime_ice.custom.yaml` | `~/.local/share/fcitx5/rime/rime_ice.custom.yaml` |
 | `fcitx5/config/classicui.conf` | `~/.config/fcitx5/conf/classicui.conf` |
 
-### 部署
+### 新机器部署
 
-1. 先按 [rime-ice](https://github.com/iDvel/rime-ice) 把仓库铺到 `~/.local/share/fcitx5/rime/`
-2. 把上表的三个文件覆盖到对应位置
-3. 重启 fcitx5: `pkill fcitx5; nohup fcitx5 -d >/dev/null 2>&1 & disown`
+```bash
+git clone git@github.com:ABiscuitttt/dotfiles.git ~/Projects/dotfiles
+
+# 先按 https://github.com/iDvel/rime-ice 把仓库铺到 ~/.local/share/fcitx5/rime/
+
+ln -sf ~/Projects/dotfiles/fcitx5/rime/default.custom.yaml   ~/.local/share/fcitx5/rime/default.custom.yaml
+ln -sf ~/Projects/dotfiles/fcitx5/rime/rime_ice.custom.yaml  ~/.local/share/fcitx5/rime/rime_ice.custom.yaml
+ln -sf ~/Projects/dotfiles/fcitx5/config/classicui.conf      ~/.config/fcitx5/conf/classicui.conf
+
+pkill fcitx5; sleep 1; nohup fcitx5 -d >/dev/null 2>&1 & disown
+
+日常工作流
+
+改 fcitx5 配置工具或直接编辑 ~/Projects/dotfiles/ 里的文件均可，两边等价。改完：
+
+cd ~/Projects/dotfiles && git add -A && git commit -m "..." && git push
