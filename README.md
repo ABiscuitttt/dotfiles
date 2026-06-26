@@ -8,7 +8,7 @@
 |---|---|
 | `fcitx5/config/classicui.conf` | `~/.config/fcitx5/conf/classicui.conf` |
 | `fcitx5/rime/default.custom.yaml` | `~/.local/share/fcitx5/rime/default.custom.yaml` |
-| `fcitx5/rime/rime_ice.custom.yaml` | `~/.local/share/fcitx5/rime/rime_ice.custom.
+| `fcitx5/rime/rime_ice.custom.yaml` | `~/.local/share/fcitx5/rime/rime_ice.custom.yaml` |
 | `claude/settings.json` | `~/.claude/settings.json` |
 | `claude/statusline-command.py` | `~/.claude/statusline-command.py` |
 
@@ -26,11 +26,14 @@ pkill fcitx5; nohup fcitx5 -d >/dev/null 2>&1 & disown
 
 # Claude Code
 mkdir -p ~/.claude
-ln -sf ~/Projects/dotfiles/claude/settings.json ~/.claude/settings.json
+ln -sf ~/Projects/dotfiles/claude/settings.json         ~/.claude/settings.json
 ln -sf ~/Projects/dotfiles/claude/statusline-command.py ~/.claude/statusline-command.py
+```
 
-日常工作流
+## 日常工作流
 
 直接改家目录里的文件（它们是仓库的 symlink），改完：
 
+```bash
 cd ~/Projects/dotfiles && git add -A && git commit -m "..." && git push
+```
