@@ -1,0 +1,22 @@
+{
+  "tui": "fullscreen",
+  "theme": "auto",
+  "language": "chinese",
+  "effortLevel": "xhigh",
+  "permissions": {
+    "defaultMode": "default"
+  },
+  "env": {
+    "ANTHROPIC_BASE_URL": "http://kirors.localhost",
+    "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-7[1m]",
+    "ANTHROPIC_AUTH_TOKEN": "sk-kiro-rs-static-key"
+  },
+  "model": "opus",
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline-command.py"
+  },
+  "enabledPlugins": {
+    "superpowers@claude-plugins-official": true
+  }
+}
