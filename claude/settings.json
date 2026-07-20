@@ -1,15 +1,13 @@
 {
-  "tui": "fullscreen",
-  "theme": "auto",
-  "language": "chinese",
-  "effortLevel": "xhigh",
-  "permissions": {
-    "defaultMode": "default"
-  },
   "env": {
     "ANTHROPIC_BASE_URL": "http://kirors.localhost",
     "ANTHROPIC_DEFAULT_OPUS_MODEL": "claude-opus-4-7[1m]",
+    "ANTHROPIC_DEFAULT_SONNET_MODEL": "claude-sonnet-4.6[1m]",
+    "ANTHROPIC_DEFAULT_HAIKU_MODEL": "claude-haiku-4.5",
     "ANTHROPIC_AUTH_TOKEN": "sk-kiro-rs-static-key"
+  },
+  "permissions": {
+    "defaultMode": "default"
   },
   "model": "opus",
   "statusLine": {
@@ -18,5 +16,10 @@
   },
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
-  }
+  },
+  "effortLevel": "xhigh",
+  "language":"chinese",
+  "tui": "fullscreen",
+  "skipWorkflowUsageWarning": true,
+  "theme": "auto"
 }

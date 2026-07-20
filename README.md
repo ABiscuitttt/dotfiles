@@ -11,6 +11,8 @@
 | `fcitx5/rime/rime_ice.custom.yaml` | `~/.local/share/fcitx5/rime/rime_ice.custom.yaml` |
 | `claude/settings.json` | `~/.claude/settings.json` |
 | `claude/statusline-command.py` | `~/.claude/statusline-command.py` |
+| `shell/zshrc` | `~/.zshrc` |
+| `kitty/` (整个目录) | `~/.config/kitty` |
 
 ## 新机器部署
 
@@ -28,6 +30,25 @@ pkill fcitx5; nohup fcitx5 -d >/dev/null 2>&1 & disown
 mkdir -p ~/.claude
 ln -sf ~/Projects/dotfiles/claude/settings.json         ~/.claude/settings.json
 ln -sf ~/Projects/dotfiles/claude/statusline-command.py ~/.claude/statusline-command.py
+
+# zsh (先装 zsh + oh-my-zsh，见下文)
+ln -sf ~/Projects/dotfiles/shell/zshrc ~/.zshrc
+
+# kitty (整个目录 symlink)
+rm -rf ~/.config/kitty          # 只有当目录已存在且不是 symlink 时才需要
+ln -s ~/Projects/dotfiles/kitty ~/.config/kitty
+```
+
+### zsh 依赖
+
+```bash
+sudo apt install -y zsh
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)" "" --unattended
+# .zshrc 里用到的插件：
+ZSH_CUSTOM=${ZSH_CUSTOM:-$HOME/.oh-my-zsh/custom}
+git clone --depth=1 https://github.com/zsh-users/zsh-autosuggestions   "$ZSH_CUSTOM/plugins/zsh-autosuggestions"
+git clone --depth=1 https://github.com/zsh-users/zsh-syntax-highlighting "$ZSH_CUSTOM/plugins/zsh-syntax-highlighting"
+chsh -s "$(which zsh)"
 ```
 
 ## 日常工作流

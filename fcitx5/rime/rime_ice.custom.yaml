@@ -4,3 +4,4 @@ patch:
   "switches/@1/reset": 0
   "switches/@3/reset": 0
   "menu/page_size": 9
+  "melt_eng/initial_quality": 0.5
