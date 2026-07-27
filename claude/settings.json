@@ -17,8 +17,8 @@
   "enabledPlugins": {
     "superpowers@claude-plugins-official": true
   },
+  "language": "chinese",
   "effortLevel": "xhigh",
-  "language":"chinese",
   "tui": "fullscreen",
   "skipWorkflowUsageWarning": true,
   "theme": "auto"
