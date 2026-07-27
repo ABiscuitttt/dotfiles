@@ -48,12 +48,13 @@
             "colorScheme": "Light Modern",
             "cursorColor": "#005FB8",
             "cursorShape": "vintage",
-            "font": 
+            "font":
             {
-                "face": "\u7b49\u8ddd\u66f4\u7eb1\u9ed1\u4f53 SC",
+                "face": "\u66f4\u7eb1\u7ec8\u7aef\u4e66\u5446\u9ed1\u4f53-\u7b80",
                 "size": 12.0,
                 "weight": "normal"
             },
+            "antialiasingMode": "grayscale",
             "historySize": 10000,
             "opacity": 100,
             "selectionBackground": "#ADD6FF",
