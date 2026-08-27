@@ -28,6 +28,22 @@ bash install.sh
 - 目标位置已有真实文件/目录 → 先备份为 `<路径>.bak.<时间戳>`，再建 symlink
 - 只建链接，不安装软件、不重启 fcitx5（见下方提醒）
 
+### Windows 部署
+
+仓库里也提供了 `install.ps1`，用于在 Windows PowerShell 中部署：
+
+```powershell
+git clone git@github.com:ABiscuitttt/dotfiles.git $env:USERPROFILE\Projects\github-repos\dotfiles
+cd $env:USERPROFILE\Projects\github-repos\dotfiles
+powershell -ExecutionPolicy Bypass -File install.ps1
+```
+
+Windows 默认需要管理员权限才能创建符号链接（除非已开启「开发者模式」）。可以先 dry-run 预览：
+
+```powershell
+powershell -ExecutionPolicy Bypass -File install.ps1 -WhatIf
+```
+
 部署后还需手动完成：
 
 - **fcitx5 + rime-ice**：先按 https://github.com/iDvel/rime-ice 把词库铺到
